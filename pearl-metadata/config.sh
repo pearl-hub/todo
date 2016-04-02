@@ -1,0 +1,1 @@
+PATH=$PATH:$PEARL_PKGDIR/bin
