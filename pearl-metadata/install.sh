@@ -1,7 +1,11 @@
 function post_install(){
-    ln -s "${PEARL_PKGDIR}/bin/todo" ${PEARL_HOME}/bin
+    link_to_path "${PEARL_PKGDIR}/bin/todo"
+}
+
+function post_update(){
+    post_install
 }
 
 function pre_remove(){
-    rm -f ${PEARL_HOME}/bin/todo
+    unlink_from_path "${PEARL_PKGDIR}/bin/todo"
 }
